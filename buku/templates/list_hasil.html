@@ -1,0 +1,26 @@
+	<table style="border-collapse:collapse" >
+		
+		{% for object in object_list %}
+		
+		<tr class="timbul"> 
+		<!--	<td>{{ object.id_buku }}</td> -->
+			<td>			
+				&nbsp;&nbsp;
+				<p class="img"><center><img src="../static/buku.png" width="60"/></center></p>
+			</td>
+			<td style="width:600px;">			
+				&nbsp;&nbsp;
+				<h4>{{ object.judul_buku }}</h4>
+				<p>Kategori : {{ object.id_kategori.kategori }}</p>
+				</p>
+			</td>
+			<td align="center" style="width:200px;">
+				&nbsp;&nbsp;
+				<a href="{% url 'buku_detail' pk=object.pk %}" class="btn btn-default">Detil</a>
+			</td>
+		</tr>
+		{% endfor %}
+	</table>
+	<br/>
+	
+	

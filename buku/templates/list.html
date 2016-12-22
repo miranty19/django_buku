@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<title>Katalog Buku</title>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'style_homepage_list.css' %}" type="text/css" media="screen, projection"/>		
+		<link rel="stylesheet" href="{% static 'bootstrap.css' %}" type="text/css" media="screen, projection"/>		
+		<link rel="stylesheet" href="{% static 'bootstrap.min.css' %}" type="text/css" media="screen, projection"/>	
+		<link rel="stylesheet" href="{% static 'font-awesome.min.css' %}" type="text/css" media="screen, projection"/>	
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+		<script src="{% static 'js/jquery.js' %}"></script>
+		<script src="{% static 'js/jquery-ui/jquery-ui.js' %}"></script>
+		<script src="{% static 'js/thickbox.js' %}"></script>	
+			
+	</head>
+<body>
+
+			<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+	      <div class="navbar-header">
+     			<H2 class="judul"><img src="../static/book.png" width="70">&nbsp;Katalog Buku</H2>
+			
+    </div>
+ <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+ <ul class="nav navbar-nav navbar-right">
+ <br>
+        <li><a class="btn btn-primary" href="{% url 'map_vi'%}" target="_NONE"><img src="../static/maps.png" width="30">&nbsp;Peta Lokasi Penerbit Buku</a></li>
+      </ul>
+	  </div>
+	
+	</div>
+	</nav>
+	
+	<center>
+	<div class="container">
+	<div class="row">
+		<form class="form-inline" action="{% url 'buku_list' %}">
+  <div class="form-group">
+    <label class="control-label" style="color:#406892;" for="txtCari">Pencarian Judul Buku &nbsp;&nbsp;</label>
+    <div class="input-group">
+      <input 
+		class="form-control input-sm"
+		id="txtCari"
+		name="{{ form.query.html_name }}" 
+		type="search"  
+		{% if form.query.value %}        
+			value="{{ form.query.value }}"
+		{% else %}
+			value=""
+		{% endif %} size="50">
+    </div>
+  </div>
+  &nbsp;&nbsp;
+  <button class="btn btn-primary" type="submit" name="page" value="1">Cari</button>
+</form>
+	</div>
+</div>
+	</center>
+	
+ {% include 'sidebar.html' %}
+	
+	 	<div class="col-sm-9 col-md-10 affix-content">
+		<div class="container">
+	<div class="results">
+	  {% include 'list_hasil.html' %}
+	</div>	
+</div>
+<center>{% include 'pagination.html' with form_target='buku-list-filter' %}	</center>
+</div>
+	<script>		
+		//$('#buku-list-filter').keyup(function() {
+		//  $('#buku-list-filter').submit();
+		//  $('#txtCari').focus();
+		//});
+	</script>
+	</div>
+</body>	

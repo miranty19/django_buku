@@ -1,0 +1,140 @@
+html,body{
+    height: 91%;
+	width:100%;
+  }
+
+  .affix-row{
+	width:100%;
+	height:100%;
+    margin-left: 0;
+    margin-right: 0;    
+  } 
+  .judul{
+  color:white;
+  }
+  
+  .col-sm-9.col-md-10{
+  background-color: white;
+  color:black;
+  width:1045px;
+  }
+  
+  .affix-content{
+	width:100%;
+	height:90%;
+    overflow-x: hidden;
+	overflow-y: auto;
+    margin-left: 0;
+    margin-right: 0;    
+  } 
+  
+		/* make sidebar nav vertical */ 
+@media (min-width: 768px){
+  .affix-content .container {
+    width: 700px;
+  }   
+
+  
+    .affix-content .container .page-header{
+    margin-top: 0;
+  }
+
+  .affix-sidebar{
+    padding-right:0; 
+    font-size:small;
+    padding-left: 0;
+  }  
+  
+  .affix-content{
+    background-color:white; 
+  } 
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar{
+    border-radius:0; 
+    margin-bottom:0; 
+    border:0;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }  
+}
+
+@media (min-width: 769px){
+  .affix-content .container {
+    width: 700px;
+  }
+    .affix-content .container .page-header{
+    margin-top: 0;
+  }  
+}
+
+@media (min-width: 992px){
+  .affix-content .container {
+  width: 900px;
+  }
+    .affix-content .container .page-header{
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1220px){
+ .affix-content .container {
+    width: 1100px; 
+  }   
+
+  
+    .affix-content .container .page-header{
+    margin-top: 0;
+  }
+
+  .affix-sidebar{
+    padding-right:0; 
+    font-size:small;
+    padding-left: 0;
+	position:relative;
+	top:-50px;
+  }  
+  
+  .affix-content{
+    background-color:white; 
+  } 
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar{
+    border-radius:0; 
+    margin-bottom:0; 
+    border:0;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+.img{
+width:200px;}
+.form-horizontal{
+width:1000px;}
+.col-lg-2.control-label{
+width:200px;}

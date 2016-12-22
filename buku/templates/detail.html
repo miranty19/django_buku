@@ -1,0 +1,81 @@
+{% load static %}
+<html>
+	<head>
+		<title>Informasi Buku</title>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'style_detil.css' %}" type="text/css" media="screen, projection"/>		
+		<link rel="stylesheet" href="{% static 'bootstrap.css' %}" type="text/css" media="screen, projection"/>		
+		<link rel="stylesheet" href="{% static 'bootstrap.min.css' %}" type="text/css" media="screen, projection"/>	
+		<link rel="stylesheet" href="{% static 'font-awesome.min.css' %}" type="text/css" media="screen, projection"/>	
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+		<script src="{% static 'js/jquery.js' %}"></script>
+		<script src="{% static 'js/jquery-ui/jquery-ui.js' %}"></script>
+		<script src="{% static 'js/thickbox.js' %}"></script>	
+			
+	</head>
+<body>
+<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+	      <div class="navbar-header">
+     			<H2 style="color:white;"class="judul"><img src="../../static/book.png" width="70">&nbsp;Katalog Buku</H2>
+			
+    </div>
+	
+	</div>
+	</nav>
+
+<div class="container">
+    <hr>
+            <div class="row row-margin-bottom">
+                <div class="lib-panel">
+                    <div class="row box-shadow">
+                        <div class="col-md-6" style="width:400px;">
+                            <img class="lib-img-show" src="../../static/buku.png">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="lib-row lib-header">
+                                <h3>{{ object.judul_buku}}<h3>
+                            </div>
+                            <div class="lib-row lib-desc">
+                              <table>
+							  <tr>
+		<td style="font-weight:bold">Kategori</td>
+		<td>:</td>
+		<td>
+			&nbsp;&nbsp;{{ object.id_kategori.kategori }}			
+		</td>
+	</tr>
+							  <tr>
+		<td style="width:120px;font-weight:bold;">Pengarang</td>
+		<td>:</td>
+		<td>
+			&nbsp;&nbsp;{{ object.id_pengarang.nama_pengarang }}			
+		</td>
+	</tr>
+	<tr>
+		<td style="font-weight:bold">Penerbit</td>
+		<td>:</td>
+		<td>
+			&nbsp;&nbsp;{{ object.id_penerbit.nama_penerbit }}			
+		</td>
+	</tr>
+	<tr>
+		<td style="font-weight:bold">Tahun Terbit</td>
+		<td>:</td>
+		<td>&nbsp;&nbsp;{{ object.tahun_terbit }}</td>
+	</tr>	
+	<tr>
+		<td style="font-weight:bold">Kota Terbit</td>
+		<td>:</td>
+		<td>&nbsp;&nbsp;{{ object.id_penerbit.kota_penerbit }}</td>
+	</tr>	
+	</table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+</div>
+	
+</body>
+</html>
